@@ -1,0 +1,17 @@
+.editorWrapper {
+    position: relative;
+}
+
+.contentEditable {
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    padding: 4px 12px;
+    outline: none;
+    width: 100%;
+}
+
+.placeholder {
+    position: absolute;
+    top: 17px;
+    padding: 4px 12px;
+}
