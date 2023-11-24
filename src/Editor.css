@@ -12,6 +12,14 @@
 
 .placeholder {
     position: absolute;
-    top: 17px;
+    top: 36px;
     padding: 4px 12px;
+}
+
+.editor-bold {
+    color: blue;
+}
+
+.editor-h1 {
+    background-color: brown;
 }
