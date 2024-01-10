@@ -65,6 +65,23 @@ function HeadingPlugin() {
 function ListPlugin() {
   const [editor] = useLexicalComposerContext();
 
+  editor.registerCommand(
+    INSERT_UNORDERED_LIST_COMMAND,
+    () => {
+      insertList(editor, "bullet");
+      return true;
+    },
+    COMMAND_PRIORITY_LOW
+  );
+  editor.registerCommand(
+    INSERT_ORDERED_LIST_COMMAND,
+    () => {
+      insertList(editor, "number");
+      return true;
+    },
+    COMMAND_PRIORITY_LOW
+  );
+
   const onClick = (tag: "ol" | "ul"): void => {
     if (tag === "ol") {
       editor.dispatchCommand(INSERT_ORDERED_LIST_COMMAND, undefined);
